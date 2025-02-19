@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body ng-app="todoapp" ng-controller="MainController">
+    <div class="container">
+        <h1>Personal Information System</h1><br>
+ 
+        <h2>Retrieve Data Using Name</h2>
+        <form ng-submit="retrieveData()">
+            <label for="name">Enter Name</label>
+            <input type="text" ng-model="name" required><br><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <ul>
+            <li ng-if="output">{{ output }}</li>
+        </ul>
+        <br>
+
+        <h2>POST DATA</h2>
+        <form ng-submit="postData()">
+            <label for="postName">Enter Your Name</label>
+            <input type="text" ng-model="postName" required><br><br>
+            <label for="postCompanyname">Company Name</label>
+            <input type="text" ng-model="postCompanyname" required><br><br>
+            <label for="postDomain">Domain</label>
+            <input type="text" ng-model="postDomain" required><br><br>
+            <button type="submit">POST</button>
+        </form>
+    </div>
+    <div class="alert alert-success text-center bottom-left"  ng-show="isModalVisible">
+        <button type="button" class="close" ng-click = "closeAlert()">×</button>
+        <span class="glyphicon glyphicon-check"></span> {{message}}
+    </div>
+
+</body>
+</html>

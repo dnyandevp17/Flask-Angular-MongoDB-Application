@@ -1,0 +1,48 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bottom-left {
+    position: fixed;
+    bottom: 20px; 
+    left: 20px;
+    z-index: 1000;
+    display: block;
+    width: auto; 
+    max-width: 300px; 
+    background-color: #d4edda; 
+    padding: 15px; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+button.close {
+    float: right;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
